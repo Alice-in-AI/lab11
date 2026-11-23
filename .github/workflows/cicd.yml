@@ -1,9 +1,8 @@
-
 name: HTML CI/CD Pipeline
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
 
 permissions:
   contents: read
@@ -22,7 +21,7 @@ jobs:
         with:
           root: .
 
-cd-deploy:
+  cd-deploy:
     needs: ci-test
     runs-on: ubuntu-latest
     environment:
